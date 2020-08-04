@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咬一口廚房</title>
+    <style>
+        html, body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            line-height: 2;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper{
+            overflow: hidden;
+            max-width: 1280px;
+        }
+
+        section{
+            margin-top: 60px;
+        }
+
+        h1{
+            font-size: 60px;
+            color: #ffffff;
+        }
+
+        h2{
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 36px;
+        }
+
+        h2::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 36px;
+            background-color: #a3dea2;
+            top: 18px;
+            left: -24px;
+            margin-bottom: 36px;
+        }
+
+        nav{
+            height: 80px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            padding: 0 20px
+        }
+
+        nav .title{
+            font-size: 36px;
+            color: #489846;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            list-style-type: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-left: 10px;
+            line-height: 1;
+        }
+
+        nav ul li.active, nav ul li:hover{
+            background-color: #ff7286;
+            color: #ffffff;
+        }
+
+        header{
+            height: 450px;
+            width: 100%;
+            background: url(imgs/bg.png) center center no-repeat;
+            background-size: cover;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-1 p{
+            margin-bottom: 40px;
+            padding: 0px 20px;
+        }
+
+        .section-1 button{
+            padding: 60px 80px;
+            font-size: 36px;
+            color: #3e613d;
+            border-radius: 10px;
+            transition: transform 0.5;
+            margin: 0 15px;
+            border: none;
+        }
+
+        .section-1 button:hover{
+            transform: scale(1.1);
+        }
+
+        .section-1 .order{
+            background-color: #a8e8e1;
+        }
+
+        .section-1 .checking-order{
+            background-color: #f9f9b5;
+        }
+
+        .menu-pic{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .menu-pic img{
+            width: 25%;
+        }
+
+        .people-message-box{
+            padding: 0px 20px;
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .people-message{
+            border-radius: 5px;
+            box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+            border: solid 1px #c7e5ec;
+            height: 200px;
+            padding: 55px 16px 16px 16px;
+            position: relative;
+            line-height: 1.7;
+            margin-left: 20px;
+        }
+
+        .people-message:first-of-type{
+            margin-left: 0px;
+        }
+
+        .people-message .pic{
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            top: -50px
+        }
+
+        .people-message .pic img{
+            width: 100%;
+        }  
+
+        .people-message .pic + div{
+            margin-bottom: 20px;
+        } 
+
+        .section-4 iframe{
+            width: 100%;
+            height: 400px;
+            margin-bottom: 40px;
+        }
+
+        footer .footer-top{
+            display: flex;
+            justify-content: space-between;
+            background: #e8efee;
+            padding: 32px;
+            color: #484848;
+            text-align: left;
+        }
+
+        footer .footer-bottom{
+            background: #35564b;
+            text-align: center;
+            color: white;
+            padding: 10px 20px;
+            line-height: 1.5;
+        }
+
+        .footer-title{
+            font-size: 36px;
+            color: #489846;
+            line-height: initial;
+        }
+
+        @media only screen and (max-width: 767px) {
+            nav{
+                height: 100px;
+                justify-content: center;
+                display: block;
+                padding: 0;
+            }
+
+            nav ul li{
+                margin-left: 0;
+                border-radius: 0px;
+                width: 25%;
+                padding: 6px 10px;
+                font-size: 16px;
+            }
+
+            .section-1 button{
+                margin: 10px 15px;
+            }
+            
+            .menu-pic{
+                display: block;
+                line-height: 0;
+            }
+
+            .menu-pic img{
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .people-message-box{
+                padding: 0px 20px;
+                display: block;
+                margin-top: 40px;
+            }
+
+            .people-message{
+                margin-left: 0px;
+                margin-top: 80px;
+                height: auto;
+            }
+
+            .people-message:first-of-type{
+                margin-top: 0px;
+            }
+
+            footer .footer-top{
+                display: flex;
+                padding: 32px;
+                flex-direction: column-reverse;
+            }
+            footer .right{
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="title">Just A Bite!</div>
+            <ul>
+                <li class="active">抽個大獎</li>
+                <li>我要點餐</li>
+                <li>訂單查詢</li>
+                <li>我要點餐</li>
+            </ul>
+        </nav>
+        <header>
+            <h1>咬一口廚房</h1>
+        </header>
+        <section class="section-1">
+            <h2>當輕食之風盛起</h2>
+            <p>由於現代人生活忙碌，常以外食為主，當高糖、高鹽、高油成為人們的日常，會導致慢性疾病與肥胖的機率大增。<br>
+                我們定期走訪農田，選用最天然、營養的食材，以簡單的烹調方式處理，最大化忠實呈現食材原本的鮮味。<br>
+                咬一口不只賣餐點，我們希望能夠讓大家愛上料理的魅力，餐館特意打造全開放式廚房，烹調透明化，也不定時舉辦美食廚房DIY，讓大家體驗不需要過多調味，就能擁有千變萬化的食物口感。
+            </p>
+            <div>
+                <button type="button" class="order">我要點餐</button>
+                <button type="button" class="checking-order">查詢訂單</button>
+            </div>
+        </section>
+        <section class="section-2">
+            <h2>Menu 搶先看</h2>
+            <div class="menu-pic">
+                <img src="imgs/f-001.png">
+                <img src="imgs/f-002.png">
+                <img src="imgs/f-003.png">
+                <img src="imgs/f-004.png">
+            </div>
+        </section>
+        <section class="section-3">
+            <h2>吃過都說好</h2>
+            <div class="people-message-box">
+                <div class="people-message">
+                    <div class="pic">
+                        <div><img src="imgs/avatar.png"></div>
+                    </div>
+                    <div>國父桑</div>
+                    <div>我一生疲於建國，去過日本，去過歐洲，卻從未到過台北101，也從來沒有吃過這麼好吃的東西...今天在時空旅行者的幫助下我終於吃到了...此生再無遺憾 QAQ!!
+                    </div>
+                </div>
+                <div class="people-message">
+                    <div class="pic">
+                        <div><img src="imgs/avatar.png"></div>
+                    </div>
+                    <div>國父桑</div>
+                    <div>我一生疲於建國，去過日本，去過歐洲，卻從未到過台北101，也從來沒有吃過這麼好吃的東西...今天在時空旅行者的幫助下我終於吃到了...此生再無遺憾 QAQ!!
+                    </div>
+                </div>
+                <div class="people-message">
+                    <div class="pic">
+                        <div><img src="imgs/avatar.png"></div>
+                    </div>
+                    <div>國父桑</div>
+                    <div>我一生疲於建國，去過日本，去過歐洲，卻從未到過台北101，也從來沒有吃過這麼好吃的東西...今天在時空旅行者的幫助下我終於吃到了...此生再無遺憾 QAQ!!
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-4">
+            <h2>我們在哪裡</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.002890183707!2d121.5623502150063!3d25.03397598397251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5L-h576p6Lev5LqU5q61N-iZnw!5e0!3m2!1szh-TW!2stw!4v1596371881444!5m2!1szh-TW!2stw" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="left">
+                    <div>餐館地址: 天上地下天堂路三分之一里六段520號</div>
+                    <div>訂位專線：02-1314-5566</div>
+                    <div>營業時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</div>
+                    <div>email：service@justabite.com.tw</div>
+                </div>
+                <div class="right">
+                    <div class="footer-title">Just A Bite!</div>
+                    <div>Facebook / Instagram / YouTube</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

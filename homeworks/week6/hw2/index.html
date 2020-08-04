@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+</head>
+<style>
+    html, body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+
+    body{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+
+    input{
+        border: solid 1px #d0d0d0;
+        padding: 8px;
+        margin-top: 16px;
+    }
+
+    .QA-title{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .form-memo{
+        font-size: 14px;
+        margin-top: 32px;
+    }
+
+    .required, .star{
+        color: #e74149;
+    }
+
+    .required{
+        margin-top: 20px;
+    }
+
+    .my-form{
+        max-width: 650px;
+        background: white;
+        margin: 10% auto;
+        box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+        border-top: solid 8px #fad312;
+        padding: 64px 32px;
+    }
+
+    footer{
+        background-color: black;
+        color: #999999;
+        font-size: 13px;
+        text-align: center;
+        padding: 24px 12px;
+    }
+
+    .submit-btn{
+        background: #fad312;
+        color: black;
+        font-size: 15px;
+        padding: 12px 32px;
+        margin-top: 48px;
+        border: none;
+        border-radius: 4px;
+    }
+
+</style>
+<body>
+    <div class="wrapper">
+        <div class="my-form">
+            <form action="">
+                <section>
+                    <h1>新拖延運動報名表單</h1>
+                    <div class="form-memo">
+                        <div>活動日期：2020/12/10 ~ 2020/12/11</div>
+                        <div>活動地點：台北市大安區新生南路二段1號</div>
+                    </div>
+                    <div class="required">* 必填</div>
+                </section>
+                <section>
+                    <div>
+                        <div class="QA-title">暱稱<span class="star"> *</span></div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <div class="QA-title">電子郵件<span class="star"> *</span></div>
+                        <input type="email">
+                    </div>
+                    <div>
+                        <div class="QA-title">手機號碼<span class="star"> *</span></div>
+                        <input type="tel">
+                    </div>
+                    <div>
+                        <div class="QA-title">報名類型<span class="star"> *</span></div>
+                        <div>
+                            <label>
+                                <input type="radio" name="type-select" value="1">
+                                躺在床上用想像力實作
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="type-select" value="2">
+                                趴在地上滑手機找現成的
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="QA-title">怎麼知道這個活動的？<span class="star"> *</span></div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <div class="QA-title">其他</div>
+                        <div>對活動的一些建議</div>
+                        <input type="text">
+                    </div>
+                    <button type="submit" class="submit-btn">提交</button>
+                    <div class="form-memo">請勿透過表單送出您的密碼。</div>
+                </section>
+            </form>
+        </div>
+        <footer>© 2020 © Copyright. All rights Reserved.</footer>
+    </div>
+</body>
+</html>
